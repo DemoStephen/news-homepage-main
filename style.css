@@ -1,2 +1,136 @@
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter';
+}
+@font-face {
+    font-family: 'Inter';
+    src: url('./assets/fonts/static/Inter-Regular.ttf');
+}
+@font-face {
+    font-family: 'Inter Bold';
+    src: url('./assets/fonts/static/Inter-Bold.ttf');
+}
+body{
+    font-size: 1rem;
+    background-color: hsl(36, 100%, 99%);
+    color: hsl(236, 13%, 42%);
+    padding: 0 5%;
+    min-height: 100vh;
+    min-width: 1330px;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem 0;
+}
+.desktopNav{
+    display: flex;
+    gap: 1.5rem;
+}
+.desktopNav li{
+    padding: 0.5rem;
+}
+main{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 1rem 0;
+}
+section:nth-child(1){
+    grid-area: 1/1/3/3;
+    background-image: url('./assets/images/image-web-3-desktop.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 40vh;
+}
+section:nth-child(2){
+    align-content: center;
+    grid-area: 1/3/4/4;
+    background-color: hsl(240, 100%, 5%);
+    padding: 2rem;
+}
+section:nth-child(3){
+    grid-area: 3/1/4/3;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+h1{
+    color:black;
+    width: 100%;
+    font-size: 3rem;
+    padding: 0 1rem 0 0;
+    font-family: 'Inter Bold';
+}
+section:nth-child(2) h2{
+    color: hsl(35, 77%, 62%);
+}
+strong{
+    font-size: 1.2rem;
+}
+hr{
+    border: 1px solid hsl(236, 13%, 42%);
+    margin: 1.5rem 0 0 0;
+}
+section:nth-child(2) article{
+    margin: 1rem 0;
+}
+section:nth-child(2) article h3{
+    color: white;
+    margin: 1rem 0;
+}
+
+section:nth-child(3) div{
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+}
+
+button{
+    background-color: hsl(5, 85%, 63%);
+    width: 70%;
+    padding: 1rem;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+}
+.sectionWithIllustration{
+    display: flex;
+    gap: 1.5rem;
+    align-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+.sectionWithIllustration img{
+    width: 30%;
+}
+.sectionWithIllustration div h2,
+.sectionWithIllustration div h3{
+    margin-bottom: 1rem;
+}
+h2{
+    color: hsl(5, 85%, 63%);
+    font-size: 2rem;
+}
+p{
+    letter-spacing: 0.7px;
+    line-height: 1.5rem;
+}
+ul{
+    list-style: none;
+}
+.d-none{
+    display: none;
+}
+.d-block{
+    display: block;
+}
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
