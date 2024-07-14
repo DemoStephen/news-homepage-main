@@ -17,14 +17,20 @@ body{
     background-color: hsl(36, 100%, 99%);
     color: hsl(236, 13%, 42%);
     padding: 0 5%;
+    padding-bottom: 1rem;
     min-height: 100vh;
     min-width: 1330px;
+
 }
 nav{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     padding: 2rem 0;
+    position:sticky;
+    top: 0;
+    background-color: white;
 }
 .desktopNav{
     display: flex;
@@ -48,16 +54,16 @@ section:nth-child(1){
     min-height: 40vh;
 }
 section:nth-child(2){
-    align-content: center;
-    grid-area: 1/3/4/4;
-    background-color: hsl(240, 100%, 5%);
-    padding: 2rem;
-}
-section:nth-child(3){
     grid-area: 3/1/4/3;
     display: flex;
     justify-content: space-between;
     gap: 2rem;
+}
+section:nth-child(3){
+    align-content: center;
+    grid-area: 1/3/4/4;
+    background-color: hsl(240, 100%, 5%);
+    padding: 2rem;
 }
 h1{
     color:black;
@@ -66,7 +72,7 @@ h1{
     padding: 0 1rem 0 0;
     font-family: 'Inter Bold';
 }
-section:nth-child(2) h2{
+section:nth-child(3) h2{
     color: hsl(35, 77%, 62%);
 }
 strong{
@@ -76,15 +82,15 @@ hr{
     border: 1px solid hsl(236, 13%, 42%);
     margin: 1.5rem 0 0 0;
 }
-section:nth-child(2) article{
+section:nth-child(3) article{
     margin: 1rem 0;
 }
-section:nth-child(2) article h3{
+section:nth-child(3) article h3{
     color: white;
     margin: 1rem 0;
 }
 
-section:nth-child(3) div{
+section:nth-child(2) div{
     width: 100%;
     display: flex;
     gap: 2rem;
@@ -132,5 +138,85 @@ ul{
 .d-block{
     display: block;
 }
+.menuIcon{
+    display: none;
+}
+
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+@media (width <= 950px){
+    body{
+        min-width: 250px;
+        padding:0 0 1rem 0;
+    }
+    nav{
+        padding: 2rem 5%;
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+        margin: 0 0 1rem 0;
+        padding: 0 5%;
+    }
+    section:nth-child(1){
+        background-image: url('./assets/images/image-web-3-mobile.jpg');
+        height: clamp(40vh,100% - 40px, 70vh);
+        background-color: red;
+    }
+    section:nth-child(2){
+        padding: unset;
+        flex-direction: column;
+    }
+    section:nth-child(2) div{
+        gap: 1rem;
+        margin: unset;
+    }
+    h1{
+        padding: unset;
+    }
+    button{
+        width: 100%;
+    }
+    .sectionWithIllustration div h2,
+    .sectionWithIllustration div h3{
+        margin-bottom: 0.4rem;
+    }
+    .sectionWithIllustration{
+        margin: unset;
+    }
+    .menuIcon{
+        display: block;
+        height:fit-content;
+    }
+    .mobileSideBar{
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 2rem;
+        min-height: 100vh;
+        min-width: 60vw;
+        background-color: white;
+        animation: sideBar 750ms linear;
+    }
+         
+    .mobileSideBar .menuIcon{
+        margin:0 0 4.5rem 0;
+    }
+    .desktopNav{
+        display: none;
+    }
+    @keyframes sideBar{
+        from{
+            right:-60vw;
+        }
+        to{
+            right: 0%
+        }
+    }
+    .mobileNav li{
+        padding: 0.5rem 0;
+    }
+    .mobileNav li+li{
+        margin-top: 0.3rem;
+    }
+}
