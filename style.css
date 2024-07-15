@@ -144,7 +144,7 @@ ul{
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
-@media (width <= 950px){
+@media (max-width <= 950px){
     body{
         min-width: 250px;
         padding:0 0 1rem 0;
